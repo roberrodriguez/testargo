@@ -1,0 +1,14 @@
+apiVersion: v2
+name: fluent-bit 
+type: application
+version: 0.15.8
+
+### You can get the most recent version number with the following commands
+# helm repo add fluent https://fluent.github.io/helm-charts
+# helm repo update
+# helm show chart fluent/fluent-bit
+
+dependencies:
+- name: fluent-bit 
+  repository: https://fluent.github.io/helm-charts 
+  version: 0.15.8
