@@ -1,0 +1,29 @@
+apiVersion: v2
+name: fluent-bit 
+type: application
+version: 0.15.8
+
+### You can get the most recent version number with the following commands
+# helm repo add fluent https://fluent.github.io/helm-charts
+# helm repo update
+# helm show chart fluent/fluent-bit
+
+dependencies:
+- name: fluent-bit 
+  repository: https://fluent.github.io/helm-charts 
+  version: 0.15.8
+---
+apiVersion: v2
+name: kibana
+type: application
+version: 7.12.0 
+
+### You can get the most recent version number with the following commands
+# helm repo add elastic https://helm.elastic.co 
+# helm repo update
+# helm show chart elastic/kibana
+
+dependencies:
+- name: kibana
+  repository: https://helm.elastic.co 
+  version: 7.12.0 
