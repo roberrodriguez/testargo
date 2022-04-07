@@ -13,3 +13,7 @@ patchesJson6902:
   target:
     kind: Deployment
     name: argocd-server
+- path: ./patches/argocd-redis-remove-context.yaml
+  target:
+    kind: Deployment
+    name: argocd-redis
