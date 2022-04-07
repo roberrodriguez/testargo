@@ -1,0 +1,31 @@
+apiVersion: v1
+data:
+  policy.csv: |
+
+    p, role:global-view, applications, get, */*, allow
+
+
+    p, role:app01-admin, applications, *, app01*/*, allow
+    p, role:app01-admin, projects, get, app01*, allow
+    p, role:app01-admin, repositories, get, app01*, allow
+    p, role:app01-admin, clusters, get, *, allow
+    p, role:app01-view, applications, get, app01*/*, allow
+    p, role:app01-view, projects, get, app01*, allow
+    p, role:app01-sync, applications, sync, app01*/*, allow
+    g, role:app01-sync, role:app01-view
+
+    p, role:app02-admin, applications, *, app02*/*, allow
+    p, role:app02-admin, projects, get, app02*, allow
+    p, role:app02-admin, repositories, get, app02*, allow
+    p, role:app02-admin, clusters, get, *, allow
+    p, role:app02-view, applications, get, app02*/*, allow
+    p, role:app02-view, projects, get, app02*, allow
+    p, role:app02-sync, applications, sync, app02*/*, allow
+    g, role:app02-sync, role:app02-view
+
+    g, app01, role:app01-admin
+    g, app02, role:app01-sync
+  policy.default: role:none
+kind: ConfigMap
+metadata:
+  name: argocd-rbac-cm

@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  accounts.app01: login
+  accounts.app02: login
+  accounts.viewer: login
+  kustomize.buildOptions: --enable-helm
+kind: ConfigMap
+metadata:
+  name: argocd-cm
