@@ -1,7 +1,7 @@
 apiVersion: builtin
 kind: ConfigMapGenerator
 metadata:
-  name: front-rest-env
+  name: test-dep-env 
 literals:
   - DB_URL="jdbc:as400://eulenpre.eulen.com;naming=system;libraries=APIREST,RHDAT,PCDAT,OSIDAT,QGPL;errors=full;metadata source=0;"
   - APP_AS400_SERVER=eulenpre.eulen.com
