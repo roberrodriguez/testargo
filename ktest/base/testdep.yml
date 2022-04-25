@@ -18,7 +18,7 @@ spec:
         - name: AS400_USER
           valueFrom:
             secretKeyRef:
-              key: AS400_USER
+              key: APP_AS400_USER
               name: as400-credentials
         image: nginx 
         imagePullPolicy: IfNotPresent
