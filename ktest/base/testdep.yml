@@ -15,7 +15,7 @@ spec:
         - configMapRef:
             name: test-dep-env
         env:
-        - name: AS$00_USER
+        - name: AS400_USER
           valueFrom:
             secretKeyRef:
               key: AS400_USER
