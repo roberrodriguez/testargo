@@ -4,7 +4,7 @@ metadata:
   name: test-dep-env 
 literals:
   - DB_URL="jdbc:as400://eulenpre.eulen.com;naming=system;libraries=APIREST,RHDAT,PCDAT,OSIDAT,QGPL;errors=full;metadata source=0;"
-  - APP_AS400_SERVER=eulenpre.eulen.com
+  - APP_AS400_SERVER=eulenpre.eulen.coss
   - APP_CONTEXT_PATH=front-rest
   - APP_ROLE_READ=GRP_APLIC_REST_PRE
   - APP_HIBERNATE_SHOW_SQL=true
