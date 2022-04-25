@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: OVERLAY
+  name: test-dep
+spec:
+  template:
+    metadata:
+      labels:
+        app: OVERLAY
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: test-dep-env
+        env:
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              key: DB_USER
+              name: db-credentials
+        image: nginx 
+        imagePullPolicy: IfNotPresent
+        name: test-dep
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30

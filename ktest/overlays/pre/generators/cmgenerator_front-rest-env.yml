@@ -1,0 +1,22 @@
+apiVersion: builtin
+kind: ConfigMapGenerator
+metadata:
+  name: front-rest-env
+literals:
+  - DB_URL="jdbc:as400://eulenpre.eulen.com;naming=system;libraries=APIREST,RHDAT,PCDAT,OSIDAT,QGPL;errors=full;metadata source=0;"
+  - APP_AS400_SERVER=eulenpre.eulen.com
+  - APP_CONTEXT_PATH=front-rest
+  - APP_ROLE_READ=GRP_APLIC_REST_PRE
+  - APP_HIBERNATE_SHOW_SQL=true
+  - APP_APIREST_PERSONALEULEN_URL=http://apirest.pre.eulen.com/per-rest-eul/
+  - APP_CRETA_PATH=/creta/
+  - APP_CRETA_IDC_PATH=/creta/idc/
+  - APP_CRETA_TRT_PATH=/creta/trt/
+  - APP_CRETA_RESPUESTAS_PATH=/creta/RESPUESTAS/
+  - APP_FACTURAE_PATH=/facturas/zonas/
+  - APP_FACTURAE_SALIDA_PATH=/facturas/ASPEDI_es/PRODUCCION/SALIDA
+  - APP_FACTURAE_SALIDATIPOPDF_PATH=/facturas/ASPEDI_es/PRODUCCION/SALIDAPDF
+  - APP_LOG_LEVEL=FINEST
+  - TZ=Europe/Amsterdam
+options:
+  disableNameSuffixHash: false 

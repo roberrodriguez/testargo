@@ -1,0 +1,12 @@
+resources:
+- ../../base
+
+generators:
+- ./generators/cmgenerator_front-rest-env.yml
+- ./generators/secretgenerator_as400-credentials.yml
+
+commonLabels:
+  app: ktest 
+
+
+
