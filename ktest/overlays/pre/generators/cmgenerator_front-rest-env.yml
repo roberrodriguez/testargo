@@ -16,7 +16,7 @@ literals:
   - APP_FACTURAE_PATH=/facturas/zonas/
   - APP_FACTURAE_SALIDA_PATH=/facturas/ASPEDI_es/PRODUCCION/SALIDA
   - APP_FACTURAE_SALIDATIPOPDF_PATH=/facturas/ASPEDI_es/PRODUCCION/SALIDAPDF
-  - APP_LOG_LEVEL=FINEST
+  - APP_LOG_LEVEL=FINESsT
   - TZ=Europe/Amsterdam
 options:
   disableNameSuffixHash: false 
