@@ -15,11 +15,11 @@ spec:
         - configMapRef:
             name: test-dep-env
         env:
-        - name: DB_USER
+        - name: AS$00_USER
           valueFrom:
             secretKeyRef:
-              key: DB_USER
-              name: db-credentials
+              key: AS400_USER
+              name: as400-credentials
         image: nginx 
         imagePullPolicy: IfNotPresent
         name: test-dep
